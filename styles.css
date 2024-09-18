@@ -1,0 +1,213 @@
+/* General */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff; /* Texto blanco para mejor legibilidad */
+    background-color: #18191a; /* Fondo oscuro general */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: #1abc9c; /* Color de enlace */
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #c52bda; /* Color de enlace al pasar el ratón */
+}
+
+header {
+    background: rgb(4, 37, 70); /* Fondo oscuro */
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgb(241, 240, 240);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #ffffff; /* Texto de los enlaces en el encabezado */
+    padding: 15px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efecto de hover */
+    border-radius: 5px;
+}
+
+.hero {
+    background: url('gta-hero-background.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #9900ff; /* Color de botón vibrante */
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #ff019e; /* Efecto hover en botones */
+    transform: translateY(-2px);
+}
+
+.featured-products, .game-tips, .about-us, footer {
+    padding: 60px 0;
+    text-align: center;
+    background: url('gta-online-background.jpg') no-repeat center center/cover;
+    background-size: cover; /* Asegúrate de que la imagen cubra todo el contenedor */
+    position: relative;
+}
+
+.featured-products::before, .game-tips::before, .about-us::before, footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Capa oscura */
+    z-index: 1;
+}
+
+.featured-products h2, .game-tips h2, .about-us h2, footer h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.product-grid, .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.product-card, .tip-card {
+    border: 1px solid #600568; /* Color de borde */
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(39, 37, 37, 0.9); /* Fondo blanco suave */
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.product-card:hover, .tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img, .tip-card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background: rgb(4, 37, 70); /* Fondo oscuro */
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .footer-links a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer .footer-contact p {
+    margin: 5px 0;
+}
+
+footer .footer-social a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.newsletter {
+    margin-top: 30px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #353131; /* Color de borde */
+    width: 250px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    background: #e67e22; /* Color de botón vibrante */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter button:hover {
+    background: #f20afa; /* Efecto hover en botones */
+}
